@@ -10,6 +10,7 @@ import java.util.List;
 import com.java.doctor;
 import com.java.hospital;
 
+
 import config.dbconnector;
 
 public class cntDoctor {
@@ -20,6 +21,43 @@ public class cntDoctor {
 	{		 
 		con = dbconnector.connecter();
 	} 
+	
+	public List<doctor>getDoctorall(){
+	   	 
+	   	 List<doctor> doctor = new ArrayList<>();
+	   	 String sql = "select * from doctor";
+	   	 try 
+	   	   {
+	   		 
+				  Statement st = con.createStatement();
+				  ResultSet rs = st.executeQuery(sql);
+				  
+				  while(rs.next())
+				  {
+					  doctor a = new doctor();
+					  a.setDID(rs.getInt(1));
+					  a.setLastName(rs.getString(2));
+					  a.setFirstName(rs.getString(3));
+					  a.setEmail(rs.getString(4));
+					  a.setRole(rs.getString(5));
+					  a.setDocID(rs.getString(6));
+					  a.setPassword(rs.getString(7));
+					  a.setSpecialization(rs.getString(8));
+					  
+					   			  
+					  doctor.add(a);
+				  }
+				
+			    } 
+	   	 catch (Exception e) 
+	   	  {
+				
+			   System.out.println(e);
+	   	  }
+	   	  
+	   	 return doctor;
+	   	 
+	    }
 	
 	
 	public void create(doctor d1) 
