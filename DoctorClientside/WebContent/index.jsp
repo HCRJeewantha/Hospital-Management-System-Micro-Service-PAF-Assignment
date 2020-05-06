@@ -35,7 +35,7 @@
 		
 		<br>
 	
-		<h3 class="text-center">Doctor Page</h3>
+		<h3 class="text-center">Doctor Registration</h3>
 		
 		<br>
 		<input type="text" id="DID" name="DID" class="form-control form-control-sm" placeholder="DID" ><br>
