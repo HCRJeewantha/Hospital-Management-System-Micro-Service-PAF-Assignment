@@ -194,21 +194,22 @@ public class cntDoctor {
 	    }
 	 
 	 
-	 public void updateDoctor(doctor d1) 
+		public void update(doctor p1) 
 		{
 			String sql = "update doctor set lastName=?,firstName=?,email=?,role=?,docID=?,password=?,specialization=? where DID=?";
 	  	 try 
 		   {
 			  PreparedStatement st = con.prepareStatement(sql);
 
-			  st.setInt(1, d1.getDID());
-			  st.setString(2, d1.getLastName());
-			  st.setString(3, d1.getFirstName());
-			  st.setString(4, d1.getEmail());
-			  st.setString(5, d1.getRole());
-			  st.setString(6, d1.getDocID());
-			  st.setString(7, d1.getPassword());
-			  st.setString(8, d1.getSpecialization());
+			  
+			  st.setString(1, p1.getLastName());
+			  st.setString(2, p1.getFirstName());
+			  st.setString(3, p1.getEmail());
+			  st.setString(4, p1.getRole());
+			  st.setString(5, p1.getDocID());
+			  st.setString(6, p1.getPassword());
+			  st.setString(7, p1.getSpecialization());
+			  st.setInt(8, p1.getDID());
 	         st.executeUpdate();
 		
 			

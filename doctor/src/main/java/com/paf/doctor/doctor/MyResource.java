@@ -103,23 +103,24 @@ public class MyResource {
 		System.out.println("Display Appolintment List Successfully");
 		return repo.getDoctorall();
 	}
-	
+		
 	@PUT
 	@Path("doctor")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public doctor updateDoctor(doctor d1)
+	public doctor update(doctor p1)
 	{
-		System.out.println(d1);
-		if(repo.getDoctor(d1.getDID()).getDID()==0) {
-			repo.create(d1);
+		System.out.println(p1);
+		if(repo.getDoctor(p1.getDID()).getDID()==0) {
+			repo.create(p1);
 			
 		}
 		else
 		{
-			repo.updateDoctor(d1);
+			repo.update(p1);
 			
-		}		
-		return d1;
+		}
+		
+		return p1;
 	}
 	
 	@DELETE
