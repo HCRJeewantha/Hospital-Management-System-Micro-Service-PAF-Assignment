@@ -93,7 +93,7 @@ $(function (){
 			dataType: 'json',
 			success: function(newDoctor){
 				console.log("Inserted");
-				$apps.append('<li><div class="card shadow-lg p-3 mb-5 bg-white rounded bg-light m-2\" style=\"width: 12rem;float: left;">'
+				$apps.append('<li><div class="card shadow-lg p-3 mb-5 bg-white rounded bg-light m-2\" style=\"width: 20rem;float: left;">'
 						+'DID:<span class="noedit DID">' + newDoctor.DID +'</span><input class="edit DID"/>'+'<br>'
 						+'lastName:<span class="noedit lastName">' + newDoctor.lastName +'</span><input class="edit lastName"/>'+'<br>'
 						+'firstName:<span class="noedit firstName">'+ newDoctor.firstName +'</span><input class="edit firstName"/> '+'<br>'

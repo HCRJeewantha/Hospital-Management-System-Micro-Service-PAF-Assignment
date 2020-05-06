@@ -9,7 +9,20 @@
 <link rel="stylesheet" href="Views/styles.css">
 </head>
 <body>
-
+<header>
+    <div class="header-banner">
+        <h1>Medico Health care</h1>
+    </div>
+    <div class="clear"></div>
+    <nav>
+        <div class="site-title">Medico Health care</div>
+        <ul>
+            <li><a href="/archive">Login</a></li>
+            <li><a href="/events">Doctors</a></li>
+            <li><a href="/contact">Make appointments</a></li>
+        <ul>
+    </nav>
+</header>
 <div class="container">
 <div class="row">
 	<div class="col-sm-4">
@@ -58,6 +71,18 @@
 
 <script src="Components/jquery-3.5.0.min.js"></script>
 <script src="Components/main.js"></script>
+<script>
+$(window).scroll(function(){
+    if ($(window).scrollTop() >= 300) {
+        $('nav').addClass('fixed-header');
+        $('nav div').addClass('visible-title');
+    }
+    else {
+        $('nav').removeClass('fixed-header');
+        $('nav div').removeClass('visible-title');
+    }
+});
+</script>
 
 </body>
 </html>
