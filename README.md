@@ -16,3 +16,4 @@ To run the project,
 6. Then import the doctor.sql file in to that data base.
 7. After, run the both project on server
 8. Finally, open the link given below in your browser.
+http://localhost:8080/DoctorClientside/
